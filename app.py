@@ -215,13 +215,14 @@ st.markdown("""
 # Define utility functions
 def get_download_link(text, filename, link_text):
     b64 = base64.b64encode(text.encode()).decode()
-    return f'<a href="data:text/plain;base64,{b64}" download="{filename}" class="download-button">📥 {link_text}</a>'
+    return f'<a href="data:text/plain;base64,{b64}" download="{filename}" class="download-button">�� {link_text}</a>'
 
 def load_history():
     try:
         with open('poetry_history.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except:
+        # Create file if it doesn't exist
         if not os.path.exists('poetry_history.json'):
             with open('poetry_history.json', 'w', encoding='utf-8') as f:
                 json.dump([], f)
@@ -276,7 +277,7 @@ def generate_nazam(start_text, words_per_line, total_lines, model, word_to_index
                 
         return " ".join(generated_text)
     except Exception as e:
-        st.error(f"Error generating poetry: {str(e)}")
+        st.error(f"🚫 Error generating poetry: {str(e)}")
         return ""
 
 # Load model and check
@@ -302,7 +303,7 @@ with tab1:
         st.subheader("🎯 Generate Your Poetry")
         start_text = st.text_input(
             "Starting Words",
-            value="waqt ki baatein",
+            value="dil ke armaan",
             help="Enter some words in Roman Urdu to start your poetry"
         )
 
