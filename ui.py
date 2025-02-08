@@ -242,7 +242,7 @@ def save_to_history(poetry, prompt):
 @st.cache_resource
 def load_model_and_encoder():
     try:
-        model = tf.keras.models.load_model("poetry_lstm_model.h5")
+        model = tf.keras.models.load_model("poetry_gru_model.h5")
         
         with open("word_encoder.pkl", "rb") as f:
             word_encoder = pickle.load(f)
@@ -303,7 +303,7 @@ with tab1:
         st.subheader("🎯 Generate Your Poetry")
         start_text = st.text_input(
             "Starting Words",
-            value="dil ke armaan",
+            value="waqt ki baatein",
             help="Enter some words in Roman Urdu to start your poetry"
         )
 
@@ -421,6 +421,6 @@ st.markdown("""
 ---
 <p style='text-align: center; color: #666;'>
     Made with ❤️ for Urdu Poetry | 
-    <a href="https://github.com/yourusername/poetry-generator" target="_blank">GitHub</a>
+    <a href="https://github.com/shaiiikh/Nazam-Generator-using-GRU" target="_blank">GitHub</a>
 </p>
 """, unsafe_allow_html=True)
