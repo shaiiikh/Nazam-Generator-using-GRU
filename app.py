@@ -1,12 +1,12 @@
 import streamlit as st
 import numpy as np
 import tensorflow as tf
-from keras.preprocessing.sequence import pad_sequences
 import pickle
 import os
 from datetime import datetime
 import json
 import base64
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Page configuration must be the first Streamlit command
 st.set_page_config(
