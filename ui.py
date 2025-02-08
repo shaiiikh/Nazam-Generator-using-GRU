@@ -215,14 +215,13 @@ st.markdown("""
 # Define utility functions
 def get_download_link(text, filename, link_text):
     b64 = base64.b64encode(text.encode()).decode()
-    return f'<a href="data:text/plain;base64,{b64}" download="{filename}" class="download-button">�� {link_text}</a>'
+    return f'<a href="data:text/plain;base64,{b64}" download="{filename}" class="download-button">📥 {link_text}</a>'
 
 def load_history():
     try:
         with open('poetry_history.json', 'r', encoding='utf-8') as f:
             return json.load(f)
     except:
-        # Create file if it doesn't exist
         if not os.path.exists('poetry_history.json'):
             with open('poetry_history.json', 'w', encoding='utf-8') as f:
                 json.dump([], f)
@@ -255,7 +254,7 @@ def load_model_and_encoder():
         st.error(f"Error loading model or encoder: {str(e)}")
         return None, None, None
 
-def generate_namzam(start_text, words_per_line, total_lines, model, word_to_index, index_to_word):
+def generate_nazam(start_text, words_per_line, total_lines, model, word_to_index, index_to_word):
     try:
         generated_text = start_text.split()
         
@@ -277,7 +276,7 @@ def generate_namzam(start_text, words_per_line, total_lines, model, word_to_inde
                 
         return " ".join(generated_text)
     except Exception as e:
-        st.error(f"🚫 Error generating poetry: {str(e)}")
+        st.error(f"Error generating poetry: {str(e)}")
         return ""
 
 # Load model and check
