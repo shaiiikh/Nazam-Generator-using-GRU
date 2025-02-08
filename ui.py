@@ -255,7 +255,7 @@ def load_model_and_encoder():
         st.error(f"Error loading model or encoder: {str(e)}")
         return None, None, None
 
-def generate_ghazal(start_text, words_per_line, total_lines, model, word_to_index, index_to_word):
+def generate_namzam(start_text, words_per_line, total_lines, model, word_to_index, index_to_word):
     try:
         generated_text = start_text.split()
         
@@ -328,7 +328,7 @@ with tab1:
     # Generate Button
     if st.button("🎨 Generate Poetry", use_container_width=True):
         with st.spinner("✍️ Creating your masterpiece..."):
-            poetry = generate_ghazal(start_text, words_per_line, total_lines, model, word_to_index, index_to_word)
+            poetry = generate_nazam(start_text, words_per_line, total_lines, model, word_to_index, index_to_word)
             if poetry:
                 st.markdown("### 📝 Generated Poetry")
                 st.markdown('<div class="poetry-output">' + poetry.replace('\n', '<br>') + '</div>', 
