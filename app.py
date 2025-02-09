@@ -303,7 +303,7 @@ with tab1:
         st.subheader("🎯 Generate Your Poetry")
         start_text = st.text_input(
             "Starting Words",
-            value="insan bhi kya cheez hai aek mein wafa nahi aur doosrey ko wafa ki ummeed hai",
+            value="aek mein wafa nahi aur doosrey ko wafa ki ummeed hai",
             help="Enter some words in Roman Urdu to start your poetry"
         )
 
