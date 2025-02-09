@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Page configuration must be the first Streamlit command
 st.set_page_config(
-    page_title="Urdu Poetry Generator",
+    page_title="Nazam Generator",
     page_icon="📜",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -288,8 +288,8 @@ if not all([model, word_to_index, index_to_word]):
     st.stop()
 
 # Header Section
-st.title("✨ Urdu Poetry Generator")
-st.markdown("##### Create beautiful Urdu poetry using artificial intelligence")
+st.title("✨ Nazam Generator")
+st.markdown("##### Create beautiful Urdu poetry using AI")
 
 # Add tabs for different sections
 tab1, tab2, tab3 = st.tabs(["Generate", "History", "Analysis"])
@@ -420,7 +420,7 @@ with st.expander("ℹ️ About this Poetry Generator"):
 st.markdown("""
 ---
 <p style='text-align: center; color: #666;'>
-    Made with ❤️ for Urdu Poetry | 
+    shaiiikh | 
     <a href="https://github.com/shaiiikh/Nazam-Generator-using-GRU" target="_blank">GitHub</a>
 </p>
 """, unsafe_allow_html=True)
