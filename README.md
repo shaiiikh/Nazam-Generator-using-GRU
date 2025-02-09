@@ -45,9 +45,14 @@ This will install:
      streamlit run app.py
      ```
    - The app will allow you to input Roman Urdu text, generate poetry, and view/download the generated results.
+   - You can also access the app online: [Nazam Generator](https://nazam-generator-using-gru-9631.streamlit.app/)
 
 4. **Using the Model**: The trained model can be loaded for further inference or deployment as needed.
 
 ## Notes
 - Ensure that the appropriate version of TensorFlow is installed for compatibility with your environment.
 - The app can store up to 50 generated poetry entries in `poetry_history.json`.
+
+## Contact
+You can find me on LinkedIn: [ali-shaiiikh](https://www.linkedin.com/in/ali-shaiiikh)  
+Or check out the [GitHub Repository](https://github.com/shaiiikh/Nazam-Generator-using-GRU)
